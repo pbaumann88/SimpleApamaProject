@@ -1,0 +1,14 @@
+Starting export ...
+Handling component entry of type: CORRELATOR
+Handling correlator component: port=15903
+Exporting configuration settings.
+Copying required resources.
+Copying 'C:/SoftwareAG/Designer/eclipse/configuration/org.eclipse.osgi/947/0/.cp/templates/custom.xml' to -> 'C:/Users/Administrator/workspace912/SimpleApamaProject/custom.xml'
+Copying 'C:/SoftwareAG/Designer/eclipse/configuration/org.eclipse.osgi/947/0/.cp/resources/windows/project.bat' to -> 'C:/Users/Administrator/workspace912/SimpleApamaProject/project.bat'
+Copying 'C:/SoftwareAG/Designer/eclipse/configuration/org.eclipse.osgi/947/0/.cp/resources/windows/startDashboards.bat' to -> 'C:/Users/Administrator/workspace912/SimpleApamaProject/startDashboards.bat'
+Copying 'C:/SoftwareAG/Designer/eclipse/configuration/org.eclipse.osgi/947/0/.cp/resources/windows/startProject.bat' to -> 'C:/Users/Administrator/workspace912/SimpleApamaProject/startProject.bat'
+Copying 'C:/SoftwareAG/Designer/eclipse/configuration/org.eclipse.osgi/947/0/.cp/resources/windows/stopProject.bat' to -> 'C:/Users/Administrator/workspace912/SimpleApamaProject/stopProject.bat'
+Copying 'C:/SoftwareAG/Designer/eclipse/configuration/org.eclipse.osgi/947/0/.cp/resources/unix/project.sh' to -> 'C:/Users/Administrator/workspace912/SimpleApamaProject/project.sh'
+Copying project resources.
+Export finished.
+Ant Export completed in 0s

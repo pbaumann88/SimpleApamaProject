@@ -1,0 +1,17 @@
+//*****************************************************************************
+// Title:         SimpleEvent
+// Description:   SimpleEvent description
+// Dependencies:  None
+// Author:        Administrator
+//
+//*****************************************************************************
+
+package io.baumann.simple;
+
+event SimpleEvent {
+	constant string LOADED := "LOADED";
+	
+	float timestamp;
+	string #monitor;
+	string type;
+}

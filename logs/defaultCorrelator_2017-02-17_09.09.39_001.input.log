@@ -1,0 +1,43 @@
+VERS 00000001 4
+HEAD 00000f25 <?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="/resources/transform.xslt"?><header><componentName>correlator</componentName><version>9.12.0.0.289801</version><build>rel/9.12.0.x@289801</build><buildPlatform>amd64-win</buildPlatform><platform>Windows Server 2008 R2 (Service Pack 1)</platform><cputype>GenuineIntel family 6 model 14 stepping 3 Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz</cputype><cpus>4</cpus><javaEnabled>true</javaEnabled><replayLogMode>inputLog</replayLogMode><args><arg>C:\SoftwareAG\Apama\bin\correlator.exe</arg><arg>--port</arg><arg>15903</arg><arg>--loglevel</arg><arg>INFO</arg><arg>--name</arg><arg>Apama Designer Correlator for SimpleApamaProject(SimpleApamaProject:defaultCorrelator)</arg><arg>-j</arg><arg>--inputLog</arg><arg>logs/defaultCorrelator_${START_TIME}_${ID}.input.log</arg></args><environment><variable>ALLUSERSPROFILE=C:\ProgramData</variable><variable>APAMA_HOME=C:\SoftwareAG\Apama</variable><variable>APAMA_WORK=C:\Users\Public\SoftwareAG\ApamaWork_9.12</variable><variable>APPDATA=C:\Users\Administrator\AppData\Roaming</variable><variable>COMMONPROGRAMFILES=C:\Program Files\Common Files</variable><variable>COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files</variable><variable>COMMONPROGRAMW6432=C:\Program Files\Common Files</variable><variable>COMPUTERNAME=DEFAULT</variable><variable>COMSPEC=C:\Windows\system32\cmd.exe</variable><variable>FP_NO_HOST_CHECK=NO</variable><variable>HOMEDRIVE=C:</variable><variable>HOMEPATH=\Users\Administrator</variable><variable>LOCALAPPDATA=C:\Users\Administrator\AppData\Local</variable><variable>LOGONSERVER=\\DEFAULT</variable><variable>NUMBER_OF_PROCESSORS=4</variable><variable>OS=Windows_NT</variable><variable>PATH=C:\SoftwareAG\Apama\..\jvm\jvm\jre\bin\server;C:\SoftwareAG\Apama\..\jvm\jvm\jre\bin;C:\SoftwareAG\Apama\..\UniversalMessaging\cplus\lib\x86_64;C:\SoftwareAG\Apama\..\jvm\jvm\jre\bin\server;C:\SoftwareAG\Apama\..\jvm\jvm\jre\bin;C:\Users\Public\SoftwareAG\ApamaWork_9.12\lib;C:\SoftwareAG\Apama\bin;C:\SoftwareAG\Apama\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Git\cmd;C:\Users\Administrator\.babun</variable><variable>PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</variable><variable>PROCESSOR_ARCHITECTURE=AMD64</variable><variable>PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel</variable><variable>PROCESSOR_LEVEL=6</variable><variable>PROCESSOR_REVISION=5e03</variable><variable>PROGRAMDATA=C:\ProgramData</variable><variable>PROGRAMFILES=C:\Program Files</variable><variable>PROGRAMFILES(X86)=C:\Program Files (x86)</variable><variable>PROGRAMW6432=C:\Program Files</variable><variable>PROMPT=$P$G</variable><variable>PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\PowerShell\Modules\</variable><variable>PUBLIC=C:\Users\Public</variable><variable>SESSIONNAME=Console</variable><variable>SYSTEMDRIVE=C:</variable><variable>SYSTEMROOT=C:\Windows</variable><variable>TEMP=C:\Users\ADMINI~1\AppData\Local\Temp\2</variable><variable>TMP=C:\Users\ADMINI~1\AppData\Local\Temp\2</variable><variable>USERDOMAIN=DEFAULT</variable><variable>USERNAME=Administrator</variable><variable>USERPROFILE=C:\Users\Administrator</variable><variable>WINDIR=C:\Windows</variable><variable>WINDOWS_TRACING_FLAGS=3</variable><variable>WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log</variable></environment><version>9.12.0.0.289801</version></header>
+RAND 0000000a 1260295488
+TIME 00000010 1487318980.237,1
+CONN 0000003e 13033816518319210401:13033813992878178209 from 127.0.0.1:50681
+CONN 0000003e 13033816518319210401:13033814065892687777 from 127.0.0.1:50680
+TIME 0000000e 1487318980.6,1
+MONF 000001bd //*****************************************************************************
+// Title:         SimpleEvent
+// Description:   SimpleEvent description
+// Dependencies:  None
+// Author:        Administrator
+//
+//*****************************************************************************
+
+package io.baumann.simple;
+
+event SimpleEvent {
+	constant string LOADED := "LOADED";
+	
+	float timestamp;
+	string #monitor;
+	string type;
+} 00000057 C:\Users\Administrator\workspace912\SimpleApamaProject\eventdefinitions\SimpleEvent.mon
+MONF 000001ce //*****************************************************************************
+// Title:         SimpleMonitor
+// Description:   SimpleMonitor description
+// Dependencies:  None
+// Author:        Administrator
+//
+//*****************************************************************************
+
+package io.baumann.simple;
+
+monitor SimpleMonitor {
+	action onload() {
+		send SimpleEvent(currentTime, "SimpleMonitor", SimpleEvent.LOADED) to "";
+	}
+}
+ 00000051 C:\Users\Administrator\workspace912\SimpleApamaProject\monitors\SimpleMonitor.mon
+TIME 0000000e 1487318980.7,1
+DISC 0000003e 13033816518319210401:13033814065892687777 from 127.0.0.1:50680
