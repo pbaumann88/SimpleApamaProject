@@ -11,5 +11,6 @@ package io.baumann.simple;
 monitor SimpleMonitor {
 	action onload() {
 		send SimpleEvent(currentTime, "SimpleMonitor", SimpleEvent.LOADED) to "";
+		syntaxfehler
 	}
 }
