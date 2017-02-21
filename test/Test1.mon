@@ -1,0 +1,43 @@
+//*****************************************************************************
+// Title:         Test1
+// Description:   Test1 description
+// Dependencies:  None
+// Author:        Administrator
+//
+//*****************************************************************************
+
+package io.baumann.simple;
+
+using com.aunit.Asserter;
+
+//@Depends SimpleApamaProject
+event HelloWorldTest {
+    Asserter asserter;
+
+    //@Test     
+    action test_001(action<> cbDone) {
+        asserter.assertTrue("test_001", true);
+        cbDone();
+    }
+
+    //@Test
+    action test_002(action<> cbDone) {
+    	asserter.assertTrue("test_002", true);
+    	cbDone();
+    }
+
+    //@Initialise
+    action init(action<> cbInit) {
+        cbInit();
+    }
+
+    //@Setup
+    action setup(action<> cbSetup) {
+        cbSetup();
+    }
+
+    //@Teardown
+    action teardown(action<> cbTeardown) {
+        cbTeardown();
+    }
+}
